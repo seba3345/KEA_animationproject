@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.hide {
+    display: none;
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+#screen {
+    background-size: cover;
+    width: 100%;
+    height: 56.25vw;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
