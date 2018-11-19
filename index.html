@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,205 @@
 <body>
 
     <div id="screen">
+        <div id="start" class="hide">
+            <div id="menu_background"></div>
+            <div id="menu_foreground"></div>
+            <div id="play"></div>
+            <div id="settings_btn"></div>
+        </div>
 
-        <div id="menu_background"></div>
-        <div id="menu_foreground"></div>
+        <div id="level_1" class="hide">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="intro1" class="hide">
+                    <h1> VELKOMMEN TIL DELETE IT!</h1>
+                    <div id="intro1_txt">
+                        <p> I dette spil vil du spille som et nøgenbillede, der lige er blevet sendt inde i en Facebook chat. Ud fra tideligere beskeder i chatten har nøgenbilledet fundet ud af hvor meget skade og ødelæggelse det kan gøre på folk. Det er nu din opgave at hjælpe nøgenbilledet med at komme hen til skralde spanden og slette sig selv. <br>
+                            <br>
+                            Hjælp nøgenbilledet med at komme ud af chatten ved at klikke på de onde beskeder.
+                            HUSK ikke at klikke på de gode, det vil give dig minus point og forhindre at billedet kan slippe ud på skrivebordet. </p>
+                    </div>
+                </div>
+                <div id="intro1_play" class="hide"></div>
 
-        <div id="game">
-            <div id="game_background"></div>
-            <div id="game_middleground"></div>
-            <div id="game_foreground"></div>
-
-            <div id="game_elements">
+                <div id="game_elements">
+                    <div id="mes1"></div>
+                    <div id="mes2"></div>
+                </div>
+                <div id="game_ui">
+                    <div id="mes_score"> 0 </div>
+                    <div id="mes_timer"></div>
+                    <div id="life1"></div>
+                    <div id="life2"></div>
+                    <div id="life3"></div>
+                    <div id="energy"></div>
+                </div>
             </div>
-            <div id="game_ui">
+        </div>
+        <div id="cutscene1" class="hide">
+            <div id="part1"></div>
+            <div id="part2"></div>
+            <div id="part3"></div>
+            <div id="part4"></div>
+        </div>
 
-                <div id="point"></div>
-                <div id="energu"></div>
-                <div id="time"></div>
+        <div id="level_2" class="hide">
+            <div id="drag_game">
+                <div id="drag_game_background"></div>
 
+                <div id="drag_game_elements">
+                    <div id="stage_1" class="hide">
+                        <div id="billede1" ondragover="allowDrop(event)">
+                            <img src="assets/pic1.svg" alt="Det er en arm" id="drag1" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede2" ondragover="allowDrop(event)">
+                            <img src="assets/pic2.svg" alt="Det er en arm" id="drag2" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede4" ondragover="allowDrop(event)">
+                            <img src="assets/pic3.svg" alt="Det er en arm" id="drag3" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede5" ondragover="allowDrop(event)">
+                            <img src="assets/pic4.svg" alt="Det er en arm" id="drag4" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede6" ondragover="allowDrop(event)">
+                            <img src="assets/pic5.svg" alt="Det er en arm" id="drag5" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede7" ondragover="allowDrop(event)">
+                            <img src="assets/pic6.svg" alt="Det er en arm" id="drag6" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede8" ondragover="allowDrop(event)">
+                            <img src="assets/pic7.svg" alt="Det er en arm" id="drag7" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede9" ondragover="allowDrop(event)">
+                            <img src="assets/pic8.svg" alt="Det er en arm" id="drag8" draggable="true" ondragstart="drag(event)">
+                        </div>
+
+                        <div id="billede10" ondragover="allowDrop(event)">
+                            <img src="assets/pic9.svg" alt="Det er en arm" id="drag9" draggable="true" ondragstart="drag(event)">
+                        </div>
+                        <div id="billede11" ondragover="allowDrop(event)">
+                            <img src="assets/pic10.svg" alt="Det er en arm" id="drag10" draggable="true" ondragstart="drag(event)">
+                        </div>
+                    </div>
+                    <div id="stage_2" class="hide">
+                        <div id="billede12" ondragover="allowDrop(event)">
+                            <img src="assets/pic10.svg" alt="Det er en arm" id="drag11" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede13" ondragover="allowDrop(event)">
+                            <img src="assets/pic9.svg" alt="Det er en arm" id="drag12" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede14" ondragover="allowDrop(event)">
+                            <img src="assets/pic8.svg" alt="Det er en arm" id="drag13" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede15" ondragover="allowDrop(event)">
+                            <img src="assets/pic7.svg" alt="Det er en arm" id="drag14" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede16" ondragover="allowDrop(event)">
+                            <img src="assets/pic6.svg" alt="Det er en arm" id="drag15" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede17" ondragover="allowDrop(event)">
+                            <img src="assets/pic5.svg" alt="Det er en arm" id="drag16" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+
+                        <div id="billede18" ondragover="allowDrop(event)">
+                            <img src="assets/pic4.svg" alt="Det er en arm" id="drag17" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede19" ondragover="allowDrop(event)">
+                            <img src="assets/pic3.svg" alt="Det er en arm" id="drag18" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede20" ondragover="allowDrop(event)">
+                            <img src="assets/pic2.svg" alt="Det er en arm" id="drag19" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede21" ondragover="allowDrop(event)">
+                            <img src="assets/pic11.svg" alt="Det er en arm" id="drag20" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                    </div>
+                    <div id="stage_3" class="hide">
+                        <div id="billede22" ondragover="allowDrop(event)">
+                            <img src="assets/pic1.svg" alt="Det er en arm" id="drag21" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede23" ondragover="allowDrop(event)">
+                            <img src="assets/pic2.svg" alt="Det er en arm" id="drag22" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede24" ondragover="allowDrop(event)">
+                            <img src="assets/pic3.svg" alt="Det er en arm" id="drag23" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede25" ondragover="allowDrop(event)">
+                            <img src="assets/pic4.svg" alt="Det er en arm" id="drag24" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede26" ondragover="allowDrop(event)">
+                            <img src="assets/pic5.svg" alt="Det er en arm" id="drag25" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede27" ondragover="allowDrop(event)">
+                            <img src="assets/pic10.svg" alt="Det er en arm" id="drag26" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede28" ondragover="allowDrop(event)">
+                            <img src="assets/pic9.svg" alt="Det er en arm" id="drag27" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede29" ondragover="allowDrop(event)">
+                            <img src="assets/pic8.svg" alt="Det er en arm" id="drag28" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede30" ondragover="allowDrop(event)">
+                            <img src="assets/pic7.svg" alt="Det er en arm" id="drag29" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                        <div id="billede31" ondragover="allowDrop(event)">
+                            <img src="assets/pic6.svg" alt="Det er en arm" id="drag30" draggable="true" ondragstart="drag(event)" width="80px">
+                        </div>
+                    </div>
+
+
+
+                    <div id="folder" ondrop="drop(event)" ondragover="allowDrop(event)" class="folder_stage1">
+                    </div>
+
+                    <div id="speak_bub" class="hide">
+                        <p id="stage2_txt">Åh nej der kommer flere! Skynd dig at få dem ned i mappen!</p>
+                        <p id="stage3_txt" class="hide">Åh nej! Der kommer endnu flere! Skynd dig at få de sidste ned i mappen!</p>
+                    </div>
+
+                    <div id="score"> 0 </div>
+                    <div id="timer"> 30 </div>
+
+
+                </div>
+                <div id="drag_game_ui">
+
+                    <div id="drag_point"></div>
+                    <div id="drag_energy"></div>
+                    <div id="drag_time"></div>
+
+                </div>
+            </div>
+        </div>
+        <div id="intro2" class="hide">
+            <h1> DU KOM UD AF MESSENGER!</h1>
+            <div id="intro1_txt">
+                <p> Billedet kom ud af messenger appen! <br>
+                    Da billedet ramte bunden af comuterskærmen, så det at det ikke var det eneste Nøgenbillede på computeren. Der ligger masser af andre billeder ude på skrivebordet! <br>
+                    <br>
+                    Du må skynde dig at samle alle billederne i mappen inden det er for sent!
+                    <br> <br>
+                    Træk i billederne med musen ned til mappen, for at få dem indsamlet. <br> </p>
+            </div>
+        </div>
+        <div id="intro2_play" class="hide"></div>
+
+        <div id="level_3" class="hide">
+            <div id="space_game">
+                <div id="space_game_background"></div>
+
+                <div id="game_elements">
+                    <div id="trash" class="trash_1"></div>
+                    <div id="alert_screen" class="hide">
+                        <div id="yes_btn"></div>
+                        <div id="no_btn"></div>
+                    </div>
+                </div>
+                <div id="space_game_ui">
+                    <div id="space_score" class="power1"></div>
+                    <div id="space_fill"></div>
+                    <div id="space_timer" class="time2"></div>
+                </div>
             </div>
         </div>
         <div id="settings_screen">
@@ -37,13 +220,39 @@
                 </div>
             </div>
         </div>
-        <div id="start"></div>
-        <div id="settings"></div>
-        <div id="gameover"></div>
-        <div id="levelcomplete"></div>
+        <div id="intro3" class="hide">
+            <h1> DU FIK SAMLET BILLEDERNE!</h1>
+            <div id="intro1_txt">
+                <p> Nøgenbillederne er nu blevet samlet i en mappe. Mappen prøver at åbne låget på skraldespanden, men det har sat sig fast!<br>
+                    <br>
+                    Giv mappen den energi den har brug for for at få åbenet låget på papirkurven. Men skynd dig, før du bliver du uploadet til internettet. <br>
+                    <br>
+                    Giv energi ved at klikke på Mellemrumstasten!
+                </p>
+            </div>
+        </div>
+        <div id="intro3_play" class="hide"></div>
+        <div id="gameover" class="hide">
+            <div id="gameover_foreground"></div>
+            <div id="restart_game"></div>
+        </div>
+        <div id="levelcomplete" class="hide">
+            <div id="nextlevel1" class="hide"></div>
+            <div id="nextlevel2" class="hide"></div>
+            <div id="nextlevel3" class="hide"></div>
+        </div>
+        <div id="bad_game_complete">
+            <div id="replay_btn"></div>
+
+        </div>
+        <div id="bad_game_complete">
+            <div id="replay_btn"></div>
+
+        </div>
 
     </div>
 </body>
 
 <script src="script.js"></script>
+
 </html>
