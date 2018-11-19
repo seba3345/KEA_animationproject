@@ -4,9 +4,9 @@ window.addEventListener("load", sidenVises);
 
 function sidenVises() {
     console.log("siden vises");
-    //    showStart();
+    showStart();
     //    hideLevel1();
-    hideLevel2();
+    //    hideLevel2();
 
 
 
@@ -521,11 +521,14 @@ function gameOver() {
 
 function levelComplete() {
     console.log("Du klarede banen!");
+
     clearTimeout(mesGameTimeOut);
     clearTimeout(gameTimeOut);
     clearTimeout(spaceGameTimeOut);
     document.querySelector("#nextlevel1").classList.remove("hide");
     document.querySelector("#nextlevel1").addEventListener("click", hideLevel1);
+    document.querySelector("#levelcomplete").classList.add("level1complete");
+
     document.querySelector("#levelcomplete").classList.remove("hide");
     document.querySelector("#level_1").classList.add("hide");
     document.querySelector("#mes1").removeEventListener("click", onClickMes);
@@ -752,6 +755,8 @@ function level2Complete() {
     clearTimeout(gameTimeOut);
     clearTimeout(spaceGameTimeOut);
     document.querySelector("#levelcomplete").classList.remove("hide");
+    document.querySelector("#levelcomplete").classList.remove("level1complete");
+    document.querySelector("#levelcomplete").classList.add("level2complete");
     document.querySelector("#nextlevel2").classList.remove("hide");
     document.querySelector("#nextlevel2").addEventListener("click", hideLevel2);
     document.querySelector("#level_2").classList.add("hide");
@@ -970,6 +975,8 @@ function badGameComplete() {
 function goodGameComplete() {
     document.querySelector("#nextlevel1").classList.remove("hide");
     document.querySelector("#nextlevel1").addEventListener("click", hideLevel1);
+    document.querySelector("#levelcomplete").classList.remove("level2complete");
+    document.querySelector("#levelcomplete").classList.add("black_out");
     document.querySelector("#levelcomplete").classList.remove("hide");
     document.querySelector("#level_1").classList.add("hide");
     document.querySelector("#mes1").removeEventListener("click", onClickMes);
