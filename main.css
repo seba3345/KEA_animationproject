@@ -11,13 +11,28 @@ body {
 }
 
 p {
-    font-size: 1.4vw;
+    font-size: 2vw;
 }
+
+#stage2_txt {
+    font-size: 1.4vw;
+
+}
+
+#stage3_txt {
+    font-size: 1.4vw;
+
+}
+
+
 
 h1 {
     font-size: 3.5vw;
 }
 
+.blur {
+    filter: blur(1vw);
+}
 
 #screen {
     background-size: cover;
@@ -36,54 +51,134 @@ h1 {
     height: 56.25vw;
     margin: auto;
     position: absolute;
-    z-index: 7;
     pointer-events: none;
 }
 
 #menu_foreground {
-    background-image: url("assets/forgrund.svg");
+    background-image: url("assets/nytitelsk%C3%A6rm.png");
     background-size: cover;
     width: 100%;
     height: 56.25vw;
     margin: auto;
     position: absolute;
-    z-index: 7;
     pointer-events: none;
 }
 
-#play {
-    background-image: url("assets/playknap.svg");
+#titel {
+    background-image: url("assets/titel.svg");
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 24vw;
+    width: 80vw;
+    height: 150vw;
+    margin: auto;
+    position: absolute;
+    top: -12vw;
+    left: 13vw;
+}
+
+#play {
+    background-image: url("assets/orangeplayknap.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 19vw;
     height: 15vw;
     margin: auto;
     position: absolute;
-    z-index: 8;
-    top: 23vw;
-    left: 37vw;
+    top: 26vw;
+    left: 40vw;
 }
 
 #play:hover {
     transform: scale(1.1);
 }
 
-#settings {
-    background-image: url("");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 6vw;
-    height: 6vw;
+#settings_screen {
+    background-image: url("assets/settingboks.png");
+    background-size: cover;
+    width: 100%;
+    height: 56.25vw;
     margin: auto;
     position: absolute;
-    z-index: 3000;
-    top: .8vw;
-    left: 92.59vw;
 
+}
+
+
+#settings_btn {
+    background-image: url("assets/ui_settings.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10.2vw;
+    position: absolute;
+    z-index: 3000;
+    top: 46vw;
+    left: 2vw;
+
+}
+
+#checkmark1 {
+    background-image: url("assets/boksmedflueben.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10.2vw;
+    position: absolute;
+    z-index: 3000;
+    top: 26vw;
+    left: 61vw;
+}
+
+#checkmark2 {
+    background-image: url("assets/boksmedflueben.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10.2vw;
+    position: absolute;
+    z-index: 3000;
+    top: 26vw;
+    left: 22vw;
+}
+
+#checkbox1 {
+    background-image: url("assets/boksudenflueben.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10.2vw;
+    position: absolute;
+    z-index: 3000;
+    top: 26vw;
+    left: 61vw;
+}
+
+#checkbox2 {
+    background-image: url("assets/boksudenflueben.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10.2vw;
+    position: absolute;
+    z-index: 3000;
+    top: 26vw;
+    left: 22vw;
+}
+
+#settings_btn:hover {
+    animation-name: settings_rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes settings_rotate {
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #gameover {
-    background-image: url("assets/Gameover_baggrund.png");
     background-size: cover;
     width: 100%;
     height: 56.25vw;
@@ -94,15 +189,50 @@ h1 {
 
 }
 
-#gameover_foreground {
-    background-image: url("assets/Gameover_indhold2.svg");
-    background-size: cover;
-    width: 100%;
+.gameover_screen1 {
+    background-image: url("assets/gameoverlvl1.png");
+}
+
+.gameover_screen2 {
+    background-image: url("assets/gameoverlvl2.png");
+}
+
+.gameover_screen3 {
+    background-image: url("assets/gameoverlvl3.png");
+}
+
+.gameover_front1 {
+    background-image: url("assets/Gameover_indhold2%20(1).svg");
+    width: 100vw;
     height: 56.25vw;
-    margin: auto;
-    position: absolute;
     top: 0vw;
     left: 0vw;
+}
+
+.gameover_front2 {
+    background-image: url("assets/Gameover_indhold.svg");
+    width: 100vw;
+    height: 56.25vw;
+    top: 0vw;
+    left: 0vw;
+}
+
+.gameover_front3 {
+    background-image: url("assets/gameover_bad.svg");
+    width: 90vw;
+    height: 35.25vw;
+    top: 13vw;
+    left: 10vw;
+}
+
+
+
+#gameover_foreground {
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+
+
 }
 
 #levelcomplete {
@@ -123,8 +253,34 @@ h1 {
     background-image: url("assets/lvl2complete.png");
 }
 
-.black_out {
-    background-color: black;
+.good_vic {
+    background-image: url("assets/victory.png");
+}
+
+
+#restart_btn1 {
+    background-image: url("assets/replay.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 7.4vw;
+    margin: auto;
+    position: absolute;
+    top: 41.6vw;
+    left: 66vw;
+    border: 3px white solid;
+}
+
+#replay_btn1 {
+    background-image: url("assets/replay.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 7.4vw;
+    position: absolute;
+    top: 41.6vw;
+    left: 66vw;
+    border: 3px white solid;
 }
 
 #nextlevel1 {
@@ -165,18 +321,16 @@ h1 {
 
 
 
-
-#victory {
-    background-image: url("");
-    background-size: cover;
-    width: 100%;
-    height: 56.25vw;
+.privat_logo {
+    background-image: url("http://privatsnak.dk/media/5990/logo-privatsnak.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 18vw;
+    height: 14vw;
     margin: auto;
     position: absolute;
-    z-index: 7;
-    top: 0;
-    left: 0;
-
+    top: 28vw;
+    left: 16vw;
 
 }
 
@@ -212,7 +366,7 @@ h1 {
 }
 
 #intro1_txt {
-    width: 35vw;
+    width: 50vw;
     height: 100%;
     text-align: justify;
 }
@@ -263,57 +417,7 @@ h1 {
     top: 1vw;
 }
 
-#space_timer {
 
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 30vw;
-    height: 10vw;
-    z-index: 4;
-    left: 20vw;
-    top: 1vw;
-}
-
-.time1 {
-    background-image: url("assets/bars/time1.svg");
-}
-
-.time2 {
-    background-image: url("assets/bars/time2.svg");
-}
-
-.time3 {
-    background-image: url("assets/bars/time3.svg");
-}
-
-.time4 {
-    background-image: url("assets/bars/time4.svg");
-}
-
-.time5 {
-    background-image: url("assets/bars/time5.svg");
-}
-
-.time6 {
-    background-image: url("assets/bars/time6.svg");
-}
-
-.time7 {
-    background-image: url("assets/bars/time7.svg");
-}
-
-.time8 {
-    background-image: url("assets/bars/time8.svg");
-}
-
-.time9 {
-    background-image: url("assets/bars/time9.svg");
-}
-
-.time10 {
-    background-image: url("assets/bars/time10.svg");
-}
 
 .type1 {
     background-image: url("assets/blue2.png");
@@ -334,7 +438,7 @@ h1 {
 }
 
 .type4 {
-    background-image: url("assets/grey1.png");
+    background-image: url("assets/blue3.png");
     width: 22vw;
     height: 11vw;
 }
@@ -532,10 +636,15 @@ h1 {
 #billede31 {
 
     position: absolute;
-    width: 15vw;
-    height: 18vw;
+    width: 10vw;
+    height: 15vw;
     margin: 1vw;
     margin-top: 3vw;
+}
+
+img {
+    width: 8vw;
+    height: 12vw;
 }
 
 .picpos1 {
@@ -636,24 +745,41 @@ h1 {
 }
 
 
-#score {
+
+
+#score_icon {
+    background-image: url("assets/score_icon.svg");
     position: absolute;
-    font-size: 5vw;
-    width: 30vw;
-    height: 5vw;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 22vw;
     padding: 10px;
-    top: 45vw;
-    left: 75vw;
+    top: 46vw;
+    left: 84vw;
 }
 
 #timer {
+    background-color: gray;
     position: absolute;
-    font-size: 5vw;
-    width: 5vw;
+    width: 0vw;
     height: 5vw;
-    padding: 10px;
-    top: 45vw;
-    left: 10vw;
+    top: 52vw;
+    left: 0vw;
+    opacity: 0.8;
+}
+
+.timer_ani {
+    animation-name: timer_drag_kf;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+}
+
+@keyframes timer_drag_kf {
+    100% {
+        width: 100vw;
+    }
 }
 
 #speak_bub {
@@ -709,6 +835,31 @@ h1 {
     animation-play-state: paused;
 }
 
+
+#space_timer_backgorund {
+    background-image: url(assets/bars/time_hvid2.svg);
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 5vw;
+    width: 40vw;
+    height: 5vw;
+    top: 3.1vw;
+    left: 3vw;
+}
+
+#space_score_background {
+    background-image: url(assets/bars/time_hvid2.svg);
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 40vw;
+    width: 39.60vw;
+    height: 6vw;
+    top: 3vw;
+    left: 57.7vw;
+}
+
 #space_score {
     position: absolute;
     background-size: 100%;
@@ -747,7 +898,7 @@ h1 {
 
 .fill_animation {
     animation-name: fill_kf;
-    animation-duration: 25s;
+    animation-duration: 30s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: linear;
@@ -792,6 +943,7 @@ h1 {
 }
 
 #space_timer {
+    background-image: url(assets/bars/timebarhvid1.svg);
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
