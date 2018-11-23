@@ -180,25 +180,35 @@ h1 {
 
 #gameover {
     background-size: cover;
-    width: 100%;
-    height: 56.25vw;
+
     margin: auto;
     position: absolute;
-    top: 0vw;
-    left: 0vw;
+
 
 }
 
 .gameover_screen1 {
     background-image: url("assets/gameoverlvl1.png");
+    width: 100%;
+    height: 56.25vw;
+    top: 0vw;
+    left: 0vw;
 }
 
 .gameover_screen2 {
     background-image: url("assets/gameoverlvl2.png");
+    width: 100%;
+    height: 56.25vw;
+    top: 0vw;
+    left: 0vw;
 }
 
 .gameover_screen3 {
     background-image: url("assets/gameoverlvl3.png");
+    width: 100%;
+    height: 56.25vw;
+    top: 0vw;
+    left: 0vw;
 }
 
 .gameover_front1 {

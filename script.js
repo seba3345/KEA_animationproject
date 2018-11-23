@@ -5,6 +5,7 @@ let showSettingSound = true;
 
 function sidenVises() {
     console.log("siden vises");
+    //    showStart();
     hideLevel2();
 
 
@@ -196,12 +197,22 @@ function restartGame() {
     document.querySelector("#gameover").classList.remove("gameover_screen3");
     document.querySelector("#gameover_foreground").classList.remove("gameover_front3");
     document.querySelector("#levelcomplete").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.remove("level1complete");
+    document.querySelector("#levelcomplete").classList.remove("level2complete");
+    document.querySelector("#levelcomplete").classList.remove("good_vic");
+    document.querySelector("#replay_btn1").classList.add("hide");
+    document.querySelector("#replay_btn1").removeEventListener("click", restartGame);
+
+
+
     document.querySelector("#nextlevel1").classList.add("hide");
     document.querySelector("#nextlevel2").classList.add("hide");
     document.querySelector("#nextlevel3").classList.add("hide");
     document.querySelector("#privatsnak").classList.add("hide");
     document.querySelector("#privatsnak_bad").classList.add("hide");
     document.querySelector("#privatsnak").classList.add("hide");
+    document.querySelector("#alert_screen").classList.add("hide");
+
 
     document.querySelector("#billede1").classList.remove("hide");
     document.querySelector("#billede2").classList.remove("hide");
@@ -233,9 +244,13 @@ function restartGame() {
     document.querySelector("#billede29").classList.remove("hide");
     document.querySelector("#billede30").classList.remove("hide");
     document.querySelector("#billede31").classList.remove("hide");
+    document.querySelector("#folder").classList.remove("folder_stage1");
+    document.querySelector("#folder").classList.remove("folder_stage2");
+    document.querySelector("#folder").classList.remove("folder_stage3");
     document.querySelector("#stage_1").classList.add("hide");
     document.querySelector("#stage_2").classList.add("hide");
     document.querySelector("#stage_3").classList.add("hide");
+
 
 
     mesPoints = 0;
@@ -1371,7 +1386,9 @@ function goodGameComplete() {
     document.querySelector("#mes2").removeEventListener("click", onClickMes2);
     document.querySelector("#replay_btn1").classList.remove("hide");
     document.querySelector("#replay_btn1").addEventListener("click", restartGame);
-
+    document.querySelector("#level_1").classList.add("hide");
+    document.querySelector("#level_2").classList.add("hide");
+    document.querySelector("#level_3").classList.add("hide");
     document.querySelector("#trash").classList.remove("trash_4");
     document.querySelector("#privatsnak").classList.remove("hide");
     document.querySelector("#privatsnak").classList.add("privat_logo");
